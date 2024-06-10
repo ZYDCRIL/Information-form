@@ -1,0 +1,171 @@
+
+
+body {
+	width: 100%;
+	height: 100%;
+  background-color: #fff;
+
+}
+
+
+.cover-header {
+	width: 100%;
+  position: relative;
+	background-color: pink;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  background-size: cover;
+  border-radius: 10px 10px 0px 0px;
+  min-height: calc(100px + 15vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.cover-photo {
+    width: 100%;
+    min-height: calc(100px + 15vw);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .cover-photo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .profile-photo-container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .profile-photo-container img {
+    width: 100%;
+    height: auto;
+  }
+.cover-photo button {
+    background-color: #d5d5d5;
+    border: #d5d5d5;
+    font-size: 14px;
+    color: black;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+
+
+.profile-image {
+	width: 100%;
+}
+.profile-image-in {
+  position: absolute;
+  left: 10%;
+	top: 45%;
+	width: 100%;
+	height: 40px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 2fr 4fr 4fr;
+}
+
+.profile-photo-container {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border: 5px solid #fff;
+	margin-left: 20px;
+	transform: translateY(-30px);
+	background-color: gray;
+	border-radius: 50%;
+}
+.profile-photo-container img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.profile-photo-container img:hover {
+	filter: brightness(0.9);
+} 
+
+.profile-photo-container button {
+  width: 26%;
+	height: 26%;
+  font-size: 18px;
+  color: black;
+  position: absolute;
+  bottom: 12px;
+  right: -5px;
+	cursor: pointer;
+	padding: 5px ;
+	border-radius: 50%;
+	background-color: #d5d5d5;
+    border: none;
+	
+}
+
+.form-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .form-content {
+    width: 50%;
+  }
+
+  .form-container {
+  position: absolute;
+  left: 35%;
+	top: 45%;
+	width: 50%;
+	height: 10%;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  }
+  
+  .form .input-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .input-box label {
+    color: #333;
+  }
+
+  .form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+  
+  .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+  }
+
+
+  .form .column {
+    display: flex;
+    column-gap: 50px;
+    margin-left: 400px;
+    width: calc(100% - 600px);
+  }

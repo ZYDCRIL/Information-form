@@ -1,0 +1,20 @@
+<div *ngIf="userData">
+  <p><strong>Username:</strong> {{ userData.username }}</p>
+  <p><strong>Nickname:</strong> {{ userData.nickname }}</p>
+  <p><strong>First Name:</strong> {{ userData.firstname }}</p>
+  <p><strong>Last Name:</strong> {{ userData.lastname }}</p>
+  <p><strong>Position:</strong> {{ userData.position }}</p>
+  <p><strong>Nationality:</strong> {{ userData.nationality }}</p>
+  <p><strong>Phone Number:</strong> {{ userData.phoneNumber }}</p>
+  <p><strong>Starting Date:</strong> {{ userData.startingDate }}</p>
+  <p><strong>Address:</strong> {{ userData.address }}</p>
+  <p><strong>Sub District:</strong> {{ userData.subDistrict }}</p>
+  <p><strong>District:</strong> {{ userData.district }}</p>
+  <p><strong>Province:</strong> {{ userData.province }}</p>
+  <p><strong>Postal Code:</strong> {{ userData.postalCode }}</p>
+  <p><strong>Facebook:</strong> {{ userData.facebook }}</p>
+  <p><strong>Line ID:</strong> {{ userData.lineId }}</p>
+  <p><strong>Instagram:</strong> {{ userData.instagram }}</p>
+  <img [src]="userData.coverPhoto" alt="Cover Photo">
+  <img [src]="userData.profilePhoto" alt="Profile Photo">
+</div>

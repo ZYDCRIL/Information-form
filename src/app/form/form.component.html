@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	</head>
+
+<body>
+
+      <div class="container mt-3">
+        <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+
+        <!-- Cover Photo -->
+          <section class="cover-image">
+            <header class="cover-header">
+            
+                <div class="cover-photo" [ngStyle]="{'background-image': 'url(' + coverPhotoUrl + ')'}">
+                  
+                  <button type="button" class="btn btn-secondary" (click)="coverPhotoInput.click()">
+                    <i class="fas fa-camera"></i> EDIT COVER PHOTO
+                  </button>
+                </div>
+                  <input #coverPhotoInput type="file" class="d-none" (change)="onFileChange($event, 'coverPhoto')">   
+                </header>
+          </section>
+
+
+        
+        <!-- Profile Photo -->
+          <section class="profile-image"> 
+            <header></header>
+            <div class="profile-image-in"> 
+              <div class="custom-file-input"> 
+                <div class="profile-photo-container" [ngStyle]="{'background-image': 'url(' + profilePhotoUrl + ')'}">
+                  <img *ngIf="profilePhotoUrl" [src]="profilePhotoUrl" alt="Profile Photo" class="img-fluid img-circle">
+                
+                  <button type="button" class="btn btn-secondary" (click)="profilePhotoInput.click()">
+                    <i class="fas fa-camera"></i> 
+                  </button>
+                </div>
+                  <input #profilePhotoInput type="file" class="d-none" (change)="onFileChange($event, 'profilePhoto')">
+              </div>   
+            </div>
+          </section>
+        </form>
+
+
+        <!-- information -->
+         <form action="#" class="form">
+          <div class="content">
+            <div class="column">
+              <div class="input-box">
+                <label for="username" class="form-label">USERNAME</label>
+                <input type="text" placeholder="Enter username" class="form-control" name="username" required>
+              </div>
+              <div class="input-box">
+                <label for="nickname" class="form-label">NICKNAME</label>
+                <input type="text" placeholder="Enter nickname" class="form-control" name="nickname" required>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="input-box">
+                <label for="nickname" class="form-label">First Name</label>
+                <input type="text" placeholder="Enter firstname" class="form-control" name="firstname" required>
+              </div>
+              <div class="input-box">
+                <label for="nickname" class="form-label">Last Name</label>
+                <input type="text" placeholder="Enter lastname" class="form-control" name="lastname" required>
+              </div>
+            </div>
+          
+            <div class="column">
+              <label class="form-label">POSITION</label>
+              
+              <div class="select-box">
+                
+                  <select>
+                    <option hidden>Please Select</option>
+                    <option value="position">UI </option>
+                    <option value="position">UX</option>
+                    
+                  </select>
+                
+              </div>
+            
+              <div class="input-box">
+                <label for="nationality" class="form-label">NATIONALITY</label>
+                <input type="text" placeholder="Enter nationality" class="form-control" name="nationality" required>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="input-box">
+                <label for="phoneNumber" class="form-label">TELEPHONE NUMBER</label>
+                <input type="text" placeholder="Enter phoneNumber" class="form-control" name="phoneNumber" required>
+              </div>
+
+              <div class="input-box">
+                <label for="startingDate" class="form-label">STARTING DATE</label>
+                <input type="date" placeholder="Enter startingDate" class="form-control" name="startingDate" required>
+              </div> 
+            </div> 
+        </div>
+      
+        
+
+        
+            <h3>Contact Information</h3>
+            
+    
+    <!-- Address -->
+    <div class="mb-3">
+      <label for="address" class="form-label">Address:</label>
+      <input id="address" type="text" class="form-control">
+    </div>
+    
+    <!-- Sub District, District, Province, Postal Code -->
+    <div class="form-group">
+      <label class="form-label">Location:</label>
+      <div class="column">
+      <div class="d-flex flex-wrap">
+        <select id="subDistrict" class="form-select me-3">
+          <option value="subDistrict1">Sub District 1</option>
+          <option value="subDistrict2">Sub District 2</option>
+          
+        </select>
+        <select id="district" class="form-select me-3">
+          <option value="district1">District 1</option>
+          <option value="district2">District 2</option>
+          
+        </select>
+        <select id="province" class="form-select me-3">
+          <option value="province1">Province 1</option>
+          <option value="province2">Province 2</option>
+          
+        </select>
+        <select id="postalCode" class="form-select">
+          <option value="postalCode1">Postal Code 1</option>
+          <option value="postalCode2">Postal Code 2</option>
+          
+        </select>
+      </div>
+      </div>
+    </div>
+    
+    <!-- Facebook, Line ID, Instagram -->
+    <div class="form-group">
+      <label class="form-label">Social Media:</label>
+      <div class="column"></div>
+      <div class="d-flex flex-wrap">
+        <input id="facebook" type="text" class="form-control me-3" placeholder="Facebook">
+        <input id="lineId" type="text" class="form-control me-3" placeholder="Line ID">
+        <input id="instagram" type="text" class="form-control" placeholder="Instagram">
+      </div>
+    </div>
+                   
+     
